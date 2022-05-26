@@ -7,11 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {COLORS, FONTS, images, SIZES} from '../../constants';
-import {InputField, Text} from '../../components';
-import Button from '../../components/Button';
+import {InputField, Text, Loader, Button} from '../../components';
 import {useDispatch, useSelector} from 'react-redux';
 import {authenticateUser} from '../../redux/actions/auth-action';
-import Loader from '../../components/Loader';
 const Login = () => {
   const dispatch = useDispatch();
 
@@ -31,7 +29,9 @@ const Login = () => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.main_view}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={styles.main_view}>
       <View style={styles.curved_view}>
         <Image style={styles.image} source={images.logo} />
       </View>
@@ -43,11 +43,13 @@ const Login = () => {
             {marginTop: SIZES.padding * 2, justifyContent: 'space-around'},
           ]}>
           <Button
+            onPress={() => console.log('Facebook')}
             isIcon={true}
             btnText="Facebook"
             imgSource={images.facebook_logo}
           />
           <Button
+            onPress={() => console.log('Google')}
             isIcon={true}
             btnText="Google"
             imgSource={images.google_logo}

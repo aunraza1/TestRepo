@@ -11,9 +11,12 @@
         <!-- Add the following line to set the default background color for all the app. -->
         <item name="android:windowBackground">@color/app_bg</item>
     </style>
-        <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+      <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@color/splashscreen_bg</item>
-        <item name="android:background">@drawable/background_splash</item>
+        <item name="android:background">@drawable/splash_icon</item>
+        <item name="android:windowDisablePreview">true</item>
     </style>
+
+
 
 </resources>
